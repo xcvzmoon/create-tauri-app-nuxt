@@ -29,6 +29,7 @@
     "@oxlint/plugins": "^1.85.0",
     "@vizejs/nuxt": "^0.428.1",
     "golar": "^0.1.10",
+    "lefthook": "^2.1.14",
     "npm-run-all2": "^9.0.3",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
