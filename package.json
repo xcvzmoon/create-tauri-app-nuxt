@@ -9,9 +9,15 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
-    "fmt": "oxfmt",
-    "lint": "oxlint",
-    "check": "oxfmt --check && oxlint"
+    "fmt": "run-p vize:fmt oxc:fmt",
+    "lint": "run-p vize:lint oxc:lint",
+    "check": "run-p vize:check oxc:check",
+    "oxc:fmt": "oxfmt",
+    "oxc:lint": "oxlint",
+    "oxc:check": "oxfmt --check && oxlint",
+    "vize:lint": "vize lint --max-warnings 0 app",
+    "vize:fmt": "vize fmt --write app",
+    "vize:check": "vize check"
   },
   "dependencies": {
     "nuxt": "^4.5.2",
@@ -21,10 +27,14 @@
   "devDependencies": {
     "@golar/vue": "^0.1.10",
     "@oxlint/plugins": "^1.85.0",
+    "@vizejs/nuxt": "^0.428.1",
     "golar": "^0.1.10",
+    "npm-run-all2": "^9.0.3",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
+    "oxlint-plugin-vize": "^0.428.1",
     "oxlint-tsgolint": "^7.0.2003",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vize": "^0.428.1"
   }
 }
