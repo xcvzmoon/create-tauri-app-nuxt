@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import * as v from 'valibot';
 
 const DEFAULT_HOST = '0.0.0.0';
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
         ignored: ['**/src-tauri/**'],
       },
     },
+    plugins: [tailwindcss()],
   },
   app: {
     pageTransition: {
@@ -52,4 +54,10 @@ export default defineNuxtConfig({
   },
   ssr: false,
   ignore: ['**/src-tauri/**'],
+  css: ['~/assets/css/tailwind.css'],
+  modules: ['@vueuse/nuxt/module', 'shadcn-nuxt'],
+  shadcn: {
+    prefix: 'S',
+    componentDir: '@/components/ui',
+  },
 });

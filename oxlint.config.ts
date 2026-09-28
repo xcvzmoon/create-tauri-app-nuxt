@@ -159,5 +159,5 @@ export default defineConfig({
     typeAware: true,
     typeCheck: true,
   },
-  ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**'],
+  ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**', 'app/components/ui/**'],
 });
