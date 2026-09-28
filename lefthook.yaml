@@ -4,10 +4,16 @@ pre-commit:
     - name: format
       glob: '*.{ts,vue,css,json,md,yaml}'
       run: pnpm fmt {staged_files}
+      exclude:
+        - 'tools/oxlint/anti-slop/**'
+        - '.agents/**'
       stage_fixed: true
 
     - name: lint
       glob: '*.{ts,vue}'
+      exclude:
+        - 'tools/oxlint/anti-slop/**'
+        - '.agents/**'
       run: pnpm lint {staged_files}
 
 pre-push:
