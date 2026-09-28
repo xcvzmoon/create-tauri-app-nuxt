@@ -3,7 +3,7 @@ pre-commit:
   jobs:
     - name: format
       glob: '*.{ts,vue,css,json,md,yaml}'
-      run: pnpm fmt {staged_files}
+      run: pnpm oxc:fmt {staged_files}
       exclude:
         - 'tools/oxlint/anti-slop/**'
         - '.agents/**'
@@ -14,7 +14,20 @@ pre-commit:
       exclude:
         - 'tools/oxlint/anti-slop/**'
         - '.agents/**'
-      run: pnpm lint {staged_files}
+      run: pnpm oxc:lint {staged_files}
+
+    - name: rust-format
+      glob:
+        - 'src-tauri/*.rs'
+        - 'src-tauri/**/*.rs'
+      run: pnpm cargo:check
+
+    - name: rust-lint
+      glob:
+        - 'src-tauri/*.rs'
+        - 'src-tauri/**/*.rs'
+        - 'src-tauri/Cargo.{toml,lock}'
+      run: pnpm cargo:lint
 
 pre-push:
   parallel: true

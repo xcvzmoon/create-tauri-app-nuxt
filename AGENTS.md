@@ -8,12 +8,12 @@ Do not treat `tools/oxlint/anti-slop/**` or `.agents/**` as something to refacto
 
 ## Git Hooks
 
-Vite+ git hooks replace lefthook. Dispatcher is installed via `prepare` → `vp config` / `vp hooks enable`.
+Lefthook runs the Git hooks configured in `lefthook.yaml`. Its dispatchers are installed in `.git/hooks/`.
 
-- **pre-commit** (`.vite-hooks/pre-commit`): unstages force-added gitignored files, runs `vp staged` (`staged` rules in `vite.config.ts`), then re-adds those files with `git add -f`. Gitignored staged files are intentionally not format/linted by the hook.
-- **pre-push** (`.vite-hooks/pre-push`): `vp run check` → `vp run typecheck` → `vp run test`
+- **pre-commit**: formats and lints matching web files with `pnpm oxc:fmt {staged_files}` and `pnpm oxc:lint {staged_files}`. It checks Rust formatting with `pnpm cargo:check` and lints Rust sources and Cargo files with `pnpm cargo:lint` when matching files are staged. All jobs run in parallel. Lefthook stages web formatter changes. The web jobs exclude `tools/oxlint/anti-slop/**` and `.agents/**`.
+- **pre-push**: runs `pnpm check` and `pnpm typecheck` in parallel. `pnpm check` checks both web and Rust formatting.
 
-Check status with `vp hooks status`. Per-commit skip: `VP_GIT_HOOKS=0 git commit`. Do not bypass with `--no-verify`.
+Pass staged file paths to the `oxc:*` scripts. The aggregate `fmt` and `lint` scripts use `run-p`, which treats extra arguments as task names. Per-commit skip: `LEFTHOOK=0 git commit`. Do not bypass with `--no-verify`.
 
 ## Style And Type Rules
 
