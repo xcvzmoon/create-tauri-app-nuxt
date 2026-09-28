@@ -1,8 +1,8 @@
 # AGENT RULES
 
-Run `vp install` before the first typecheck.
+Run `pnpm install` before the first typecheck.
 
-**Verification order:** `vp run check` → `vp run typecheck` → `vp run test` → `vp run build`. Run that sequence before calling work done.
+**Verification order:** `pnpm check` → `pnpm typecheck` → `pnpm test` → `pnpm build`. Run that sequence before calling work done.
 
 Do not treat `tools/oxlint/anti-slop/**` or `.agents/**` as something to refactor for product features. oxfmt/oxlint intentionally ignore both.
 
