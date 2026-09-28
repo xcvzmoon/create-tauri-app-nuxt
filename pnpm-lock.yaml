@@ -54,6 +54,9 @@ importers:
       '@golar/vue':
         specifier: ^0.1.10
         version: 0.1.10
+      '@iconify-json/hugeicons':
+        specifier: ^1.2.35
+        version: 1.2.35
       '@nuxt/cli':
         specifier: alpha
         version: 4.0.0-alpha.1(@nuxt/schema@4.5.2)(jiti@2.7.0)(oxc-parser@0.144.0)(rolldown@1.2.11)
@@ -90,9 +93,6 @@ importers:
       oxlint:
         specifier: ^1.85.0
         version: 1.85.0(oxlint-tsgolint@7.0.2003)
-      oxlint-plugin-vize:
-        specifier: ^0.428.1
-        version: 0.428.1
       oxlint-tsgolint:
         specifier: ^7.0.2003
         version: 7.0.2003
@@ -486,6 +486,9 @@ packages:
     engines: {node: '>=22.12.0'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/hugeicons@1.2.35':
+    resolution: {integrity: sha512-c06tY90JZnKhOLBAKoQ1z2pqXMRdATuYXslTKwaaIAjLzKsTIsE+GGknY6+qo/SP0U/NG9xQjr4N+zfDqOeQiQ==}
 
   '@iconify/collections@1.0.742':
     resolution: {integrity: sha512-4YrzjMOcF2Wmiakc1bS0AhvNb+zedU0fGNuGxjgNAfgw1WszIOwuq6LdqqFe3kvMKRB07d1LDWe1BNhhO6uXPA==}
@@ -1187,10 +1190,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxlint/plugins@1.78.0':
-    resolution: {integrity: sha512-Ypt8KeRYw+4jUtlPirfcHWMrn5ms12VrrFPD+Mds477/7tJxG1Kcz2Yrg2nVcTQEUx/GdlhS+BUg1kmxNm04Ug==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
   '@oxlint/plugins@1.85.0':
     resolution: {integrity: sha512-qqHqML3ME3cxGgFvWJG8wwMnJc9ol5SMdtqkq0k8r7l0USmC+HRXYjzDacME4Dqkx4yqrUsBhj0JYvji8fHxJQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -1799,58 +1798,6 @@ packages:
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.2.25
-
-  '@vizejs/native-darwin-arm64@0.428.1':
-    resolution: {integrity: sha512-LlaVQkJBqEG8XwlkySN0tz1SWUv0x7FH3hvqNJsNA+2S6if4g09xPivfPFc2o8xq2zVAT3vIaBS+RCJ9E1MpFg==}
-    engines: {node: '>=22'}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@vizejs/native-darwin-x64@0.428.1':
-    resolution: {integrity: sha512-kflOf0NWsznZX8PylGIeK6mefjgjn+p+NebDwpi+0Vy9VgADCGgkVSk50xo5+3Tr/IHGypWbt1Wqe2Ol1O7Ymw==}
-    engines: {node: '>=22'}
-    cpu: [x64]
-    os: [darwin]
-
-  '@vizejs/native-linux-arm64-gnu@0.428.1':
-    resolution: {integrity: sha512-eck/AF0NuHWk7lhfsCs23/WMAi/iMa6TXWwvu27sMpYauZKuIVf6t9c5IAG8CrZcncsim7MiR6knZ+oKSEGreg==}
-    engines: {node: '>=22'}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  '@vizejs/native-linux-arm64-musl@0.428.1':
-    resolution: {integrity: sha512-icbZbx1W0A6knuXfwSirWeYo9TcFprJtzhHFWz1FYvzEQ3+i9eCW/cdq9OI9l14GuGjNNnyQvH8t3AS7GBhoNw==}
-    engines: {node: '>=22'}
-    cpu: [arm64]
-    os: [linux]
-    libc: [musl]
-
-  '@vizejs/native-linux-x64-gnu@0.428.1':
-    resolution: {integrity: sha512-1yedOBulo8+UYNprFvbnaT8hb+Ggq7lxmVSuHslyV6exAoe4ptStJh9Byu4nOhtoKN++i58TFkZud+Deb0LqSQ==}
-    engines: {node: '>=22'}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  '@vizejs/native-linux-x64-musl@0.428.1':
-    resolution: {integrity: sha512-kLYjt/VLXvVGJMenAkRbGJkoEN+FA2z7PUgOAv1xhD5cwNSgb5Ebb79q9/ZF7e5h+8nxR1OvmqTlUPVfyfiyQA==}
-    engines: {node: '>=22'}
-    cpu: [x64]
-    os: [linux]
-    libc: [musl]
-
-  '@vizejs/native-win32-arm64-msvc@0.428.1':
-    resolution: {integrity: sha512-ZdSrFKoNRomrFtJ8DazXehxiPTtADoFgb/isAV2jPwD3L/UDGXQhmOK9IBLhG1jXojzL4xsEb6XNgWQ0X8bzxA==}
-    engines: {node: '>=22'}
-    cpu: [arm64]
-    os: [win32]
-
-  '@vizejs/native-win32-x64-msvc@0.428.1':
-    resolution: {integrity: sha512-/mORyZKPs4YUWOkQwjTP0PNgzNKc8z009zddX5wRRzi7+ZT70mIH9bbmSftvlB/74PNyO0SLzD+OuAGugINBjw==}
-    engines: {node: '>=22'}
-    cpu: [x64]
-    os: [win32]
 
   '@volar/language-core@2.4.28':
     resolution: {integrity: sha512-w4qhIJ8ZSitgLAkVay6AbcnC7gP3glYM3fYwKV3srj8m494E3xtrCv6E+bWviiK/8hs6e6t1ij1s2Endql7vzQ==}
@@ -3355,11 +3302,6 @@ packages:
       vite-plus:
         optional: true
 
-  oxlint-plugin-vize@0.428.1:
-    resolution: {integrity: sha512-HkV7XI26rlVYlqirLB0AMo6fdaxwgRUTuXp5xg9O3SqsEnMmrFGTn56w3jOi+KkWtJ6PHV/042lNNwkurtIy/A==}
-    engines: {node: ^22 || >= 24}
-    hasBin: true
-
   oxlint-tsgolint@7.0.2003:
     resolution: {integrity: sha512-VnK4zlqgmgq/7ZcjzCk/WpN8kKFsYGcB85Io9qT3wL4K8Un3RKmJkp793crNETieMusPMKOA4a+Mw2wbteI6TQ==}
     hasBin: true
@@ -4847,6 +4789,10 @@ snapshots:
   '@golar/win32-x64@0.1.10':
     optional: true
 
+  '@iconify-json/hugeicons@1.2.35':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify/collections@1.0.742':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5592,8 +5538,6 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.85.0':
     optional: true
 
-  '@oxlint/plugins@1.78.0': {}
-
   '@oxlint/plugins@1.85.0': {}
 
   '@parcel/watcher-wasm@2.6.0':
@@ -6037,30 +5981,6 @@ snapshots:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)
       vue: 3.5.43(typescript@6.0.3)
-
-  '@vizejs/native-darwin-arm64@0.428.1':
-    optional: true
-
-  '@vizejs/native-darwin-x64@0.428.1':
-    optional: true
-
-  '@vizejs/native-linux-arm64-gnu@0.428.1':
-    optional: true
-
-  '@vizejs/native-linux-arm64-musl@0.428.1':
-    optional: true
-
-  '@vizejs/native-linux-x64-gnu@0.428.1':
-    optional: true
-
-  '@vizejs/native-linux-x64-musl@0.428.1':
-    optional: true
-
-  '@vizejs/native-win32-arm64-msvc@0.428.1':
-    optional: true
-
-  '@vizejs/native-win32-x64-msvc@0.428.1':
-    optional: true
 
   '@volar/language-core@2.4.28':
     dependencies:
@@ -7796,19 +7716,6 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.70.0
       '@oxfmt/binding-win32-ia32-msvc': 0.70.0
       '@oxfmt/binding-win32-x64-msvc': 0.70.0
-
-  oxlint-plugin-vize@0.428.1:
-    dependencies:
-      '@oxlint/plugins': 1.78.0
-    optionalDependencies:
-      '@vizejs/native-darwin-arm64': 0.428.1
-      '@vizejs/native-darwin-x64': 0.428.1
-      '@vizejs/native-linux-arm64-gnu': 0.428.1
-      '@vizejs/native-linux-arm64-musl': 0.428.1
-      '@vizejs/native-linux-x64-gnu': 0.428.1
-      '@vizejs/native-linux-x64-musl': 0.428.1
-      '@vizejs/native-win32-arm64-msvc': 0.428.1
-      '@vizejs/native-win32-x64-msvc': 0.428.1
 
   oxlint-tsgolint@7.0.2003:
     optionalDependencies:

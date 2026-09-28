@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@golar/vue": "^0.1.10",
+    "@iconify-json/hugeicons": "^1.2.35",
     "@nuxt/cli": "4.0.0-alpha.1",
     "@nuxtjs/color-mode": "^4.0.1",
     "@oxlint/plugins": "^1.85.0",
@@ -60,7 +61,6 @@
     "npm-run-all2": "^9.0.3",
     "oxfmt": "^0.70.0",
     "oxlint": "^1.85.0",
-    "oxlint-plugin-vize": "^0.428.1",
     "oxlint-tsgolint": "^7.0.2003",
     "tailwindcss": "^4.3.3",
     "tauri-nuxt-dev": "^0.0.1",
