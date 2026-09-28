@@ -13,6 +13,6 @@
     size="icon"
     @click="isDark = !isDark"
   >
-    <Icon :name="isDark ? 'i-lucide-moon' : 'i-lucide-sun'" />
+    <Icon :name="isDark ? 'i-hugeicons-moon-02' : 'i-hugeicons-sun-03'" />
   </SButton>
 </template>
