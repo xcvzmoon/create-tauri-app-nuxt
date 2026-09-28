@@ -17,5 +17,5 @@ export default defineConfig({
   singleQuote: true,
   singleAttributePerLine: true,
   vueIndentScriptAndStyle: true,
-  ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**'],
+  ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**', 'CHANGELOG.md'],
 });

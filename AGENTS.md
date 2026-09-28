@@ -6,6 +6,8 @@ Run `vp install` before the first typecheck.
 
 Do not treat `tools/oxlint/anti-slop/**` or `.agents/**` as something to refactor for product features. oxfmt/oxlint intentionally ignore both.
 
+Genbumppush writes `CHANGELOG.md`. Keep that file out of formatter runs; oxfmt and the pre-commit format job exclude it.
+
 ## Git Hooks
 
 Lefthook runs the Git hooks configured in `lefthook.yaml`. Its dispatchers are installed in `.git/hooks/`.

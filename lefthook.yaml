@@ -7,6 +7,7 @@ pre-commit:
       exclude:
         - 'tools/oxlint/anti-slop/**'
         - '.agents/**'
+        - 'CHANGELOG.md'
       stage_fixed: true
 
     - name: lint
