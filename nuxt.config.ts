@@ -3,5 +3,4 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  modules: ['@vizejs/nuxt'],
 });
