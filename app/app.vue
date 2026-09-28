@@ -1,5 +1,6 @@
 <template>
-  <div class="h-svh grid place-items-center">
-    <SButton>Welcome to Create Tauri App Nuxt</SButton>
+  <div class="h-svh flex items-center justify-center gap-1">
+    <SButton>Create Tauri App with Nuxt</SButton>
+    <ColorModeButton />
   </div>
 </template>

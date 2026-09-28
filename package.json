@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@lucide/vue": "^1.48.0",
+    "@nuxt/icon": "2.5.1",
     "@vueuse/core": "^15.0.0",
     "@vueuse/nuxt": "15.0.0",
     "class-variance-authority": "^0.7.1",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@golar/vue": "^0.1.10",
     "@nuxt/cli": "4.0.0-alpha.1",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@oxlint/plugins": "^1.85.0",
     "@tailwindcss/vite": "^4.3.3",
     "@tauri-apps/cli": "^2.12.0",

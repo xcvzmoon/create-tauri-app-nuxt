@@ -55,7 +55,10 @@ export default defineNuxtConfig({
   ssr: false,
   ignore: ['**/src-tauri/**'],
   css: ['~/assets/css/tailwind.css'],
-  modules: ['@vueuse/nuxt/module', 'shadcn-nuxt'],
+  modules: ['@nuxtjs/color-mode', '@vueuse/nuxt/module', 'shadcn-nuxt', '@nuxt/icon'],
+  colorMode: {
+    classSuffix: '',
+  },
   shadcn: {
     prefix: 'S',
     componentDir: '@/components/ui',
