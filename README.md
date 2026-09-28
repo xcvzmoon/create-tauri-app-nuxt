@@ -1,75 +1,44 @@
-# Nuxt Minimal Starter
+# create-tauri-app-nuxt
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![CI](https://github.com/xcvzmoon/create-tauri-app-nuxt/actions/workflows/ci.yaml/badge.svg)](https://github.com/xcvzmoon/create-tauri-app-nuxt/actions/workflows/ci.yaml)
+[![Release](https://github.com/xcvzmoon/create-tauri-app-nuxt/actions/workflows/release.yaml/badge.svg)](https://github.com/xcvzmoon/create-tauri-app-nuxt/actions/workflows/release.yaml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 
-## Setup
+A desktop app starter using Nuxt 4 for the frontend and Tauri 2 for the native app.
 
-Make sure to install dependencies:
+## Requirements
+
+- Node.js 26 and pnpm 12.6.0, as used in CI
+- Rust 1.90 or newer
+- The [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/) for your operating system
+
+## Get started
 
 ```bash
-# npm
-npm install
-
-# pnpm
+cp .env.example .env
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The development app uses port `65432`, set in `.env.example` and `tauri-nuxt-dev.config.ts`.
 
-Build the application for production:
+## Commands
 
-```bash
-# npm
-npm run build
+| Command          | Purpose                                            |
+| ---------------- | -------------------------------------------------- |
+| `pnpm dev`       | Start Nuxt and the Tauri development app           |
+| `pnpm check`     | Check web and Rust formatting                      |
+| `pnpm lint`      | Run Oxlint and Clippy                              |
+| `pnpm typecheck` | Typecheck the Nuxt app                             |
+| `pnpm test`      | Run Rust tests                                     |
+| `pnpm build`     | Generate the Nuxt frontend and build Tauri bundles |
 
-# pnpm
-pnpm build
+The frontend lives in `app/`, and the native app lives in `src-tauri/`. Tauri runs `pnpm nuxt:generate` before a production build and loads the generated frontend from `dist`.
 
-# yarn
-yarn build
+## Contributing and security
 
-# bun
-bun run build
-```
+Read [CONTRIBUTING.md](./CONTRIBUTING.md) before sending a pull request and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) when participating in the project. Report vulnerabilities using [SECURITY.md](./SECURITY.md).
 
-Locally preview production build:
+## License
 
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+MIT. See [LICENSE.md](./LICENSE.md).
