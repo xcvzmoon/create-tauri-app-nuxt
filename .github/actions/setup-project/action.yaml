@@ -16,3 +16,9 @@ runs:
         version: '12.6.0'
         runtime: node@26
         cache: true
+
+    - name: Cache Rust dependencies
+      uses: Swatinem/rust-cache@v2.9.2
+      with:
+        workspaces: src-tauri -> target
+        shared-key: tauri
