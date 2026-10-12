@@ -61,6 +61,12 @@
       "skillPath": "better-auth/create-auth/SKILL.md",
       "computedHash": "9a9b498bc144367b8e237233f89def63fb2bd69e8cafe173eaa58fe3a863cdc4"
     },
+    "create-pr-with-evidence": {
+      "source": "luoling8192/create-pr-with-evidence-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "b7807aa4b2912fa93da304297b832bfccb851c54535d443286e87dd079c546c7"
+    },
     "debugging": {
       "source": "poteto/noodle",
       "sourceType": "github",
@@ -175,6 +181,12 @@
       "sourceType": "github",
       "skillPath": "skills/nuxt-ui/SKILL.md",
       "computedHash": "72acbf25ef51d20a455b96ec834592855b2982964fe87f7d8620291c95a53301"
+    },
+    "optimise-github-actions": {
+      "source": "enesgules/dotfiles",
+      "sourceType": "github",
+      "skillPath": "skills/optimise-github-actions/SKILL.md",
+      "computedHash": "c82f63628c0e6e3d5258f94b8f90b66f9c32a077417aaafbba1bbd74e7c7173e"
     },
     "organization-best-practices": {
       "source": "better-auth/skills",

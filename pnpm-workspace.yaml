@@ -2,6 +2,3 @@ allowBuilds:
   esbuild: true
   lefthook: true
   vue-demi: true
-
-overrides:
-  '@nuxt/cli': alpha

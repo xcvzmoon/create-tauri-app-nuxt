@@ -5,16 +5,18 @@ pre-commit:
       glob: '*.{ts,vue,css,json,md,yaml}'
       run: pnpm oxc:fmt {staged_files}
       exclude:
-        - 'tools/oxlint/anti-slop/**'
         - '.agents/**'
+        - 'tools/oxlint/anti-slop/**'
+        - 'app/components/ui/**'
         - 'CHANGELOG.md'
       stage_fixed: true
 
     - name: lint
       glob: '*.{ts,vue}'
       exclude:
-        - 'tools/oxlint/anti-slop/**'
         - '.agents/**'
+        - 'tools/oxlint/anti-slop/**'
+        - 'app/components/ui/**'
       run: pnpm oxc:lint {staged_files}
 
     - name: rust-format
