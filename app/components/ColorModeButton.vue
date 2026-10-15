@@ -8,11 +8,11 @@
 </script>
 
 <template>
-  <SButton
+  <Button
     :aria-label="`Switch to ${isDark ? 'light' : 'dark'} mode`"
     size="icon"
     @click="isDark = !isDark"
   >
     <Icon :name="isDark ? 'i-hugeicons-moon-02' : 'i-hugeicons-sun-03'" />
-  </SButton>
+  </Button>
 </template>
