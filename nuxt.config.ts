@@ -61,6 +61,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/color-mode', '@vueuse/nuxt/module', 'shadcn-nuxt', '@nuxt/icon'],
   colorMode: {
     classSuffix: '',
+    preference: 'dark',
   },
   shadcn: {
     prefix: '',
