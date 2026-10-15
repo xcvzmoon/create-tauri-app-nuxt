@@ -6,7 +6,13 @@ type ModuleOptions = {
   prefix: false | string;
 };
 
-const tauriModules = [{ module: tauriCli, prefix: 'Cli', importPath: '@tauri-apps/cli' }];
+const tauriModules = [
+  {
+    module: tauriCli,
+    prefix: 'Cli',
+    importPath: '@tauri-apps/cli',
+  },
+];
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
@@ -21,12 +27,23 @@ export default defineNuxtModule<ModuleOptions>({
       const as = `${options.prefix}${prefix}`;
 
       if ('default' in module) {
-        addImports({ name: 'default', from, as });
+        addImports({
+          name: 'default',
+          from,
+          as,
+        });
       }
 
       for (const name of Object.keys(module)) {
-        if (name === 'default' || name === 'module.exports') continue;
-        addImports({ name, from, as: as + capitalize(name) });
+        if (name === 'default' || name === 'module.exports') {
+          continue;
+        }
+
+        addImports({
+          name,
+          from,
+          as: as + capitalize(name),
+        });
       }
     }
   },
