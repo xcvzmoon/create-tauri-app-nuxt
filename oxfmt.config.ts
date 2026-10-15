@@ -14,13 +14,20 @@ export default defineConfig({
     ],
     newlinesBetween: false,
   },
+  sortTailwindcss: {
+    stylesheets: 'app/assets/css/tailwind.css',
+    attributes: ['class'],
+    functions: ['clsx', 'cn'],
+    preserveWhitespace: true,
+  },
   singleQuote: true,
   singleAttributePerLine: true,
   vueIndentScriptAndStyle: true,
   ignorePatterns: [
-    'tools/oxlint/anti-slop/**',
-    '.agents/**',
     'CHANGELOG.md',
+    '.agents/**',
     'app/components/ui/**',
+    'tools/oxlint/anti-slop/**',
+    'tools/oxlint/custom/**',
   ],
 });

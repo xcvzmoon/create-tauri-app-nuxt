@@ -7,6 +7,10 @@ export default defineConfig({
       name: 'anti-slop',
       specifier: './tools/oxlint/anti-slop/index.ts',
     },
+    {
+      name: 'custom',
+      specifier: './tools/oxlint/custom/index.ts',
+    },
   ],
   categories: {
     correctness: 'error',
@@ -146,10 +150,14 @@ export default defineConfig({
     'anti-slop/require-safety-comment-for-type-assertion': 'error',
 
     'oxc/no-accumulating-spread': 'error',
+
+    'custom/no-inline-blocks': 'error',
+    'custom/require-multiline-object-properties': 'error',
+    'custom/type-imports-first': 'error',
   },
   overrides: [
     {
-      files: ['app/**'],
+      files: ['apps/**'],
       rules: {
         'unicorn/consistent-function-scoping': 'off',
       },
@@ -159,5 +167,10 @@ export default defineConfig({
     typeAware: true,
     typeCheck: true,
   },
-  ignorePatterns: ['tools/oxlint/anti-slop/**', '.agents/**', 'app/components/ui/**'],
+  ignorePatterns: [
+    '.agents/**',
+    'app/components/ui/**',
+    'tools/oxlint/anti-slop/**',
+    'tools/oxlint/custom/**',
+  ],
 });
